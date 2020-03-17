@@ -16,3 +16,11 @@ info:
   app.name: muchi.zuul
   company.name: www.muchi
 
+#提供 代理 加路由 加过滤三大功能
+zuul:
+  prefix: /mz
+  ignored-services: "*"
+  routes:
+    mz.serviceOd: cloud-dept
+    mz.path: /mzdept/**
+

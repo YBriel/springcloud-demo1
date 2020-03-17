@@ -1,7 +1,9 @@
 package com.muchi.cloud.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.muchi.entity.Dept;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -11,7 +13,8 @@ import java.util.List;
  * Date: 2020/2/6   11:47
  */
 @Mapper
-public interface DeptDAO {
+@Component
+public interface DeptDAO extends BaseMapper<Dept> {
 
      boolean addDept(Dept dept);
 

@@ -1,5 +1,7 @@
 package com.muchi.cloud.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.muchi.cloud.dao.DeptDAO;
 import com.muchi.cloud.service.DeptService;
 import com.muchi.entity.Dept;
@@ -14,7 +16,7 @@ import java.util.List;
  * Date: 2020/2/6   11:59
  */
 @Service
-public class DeptServiceImpl implements DeptService {
+public class DeptServiceImpl extends ServiceImpl<DeptDAO,Dept> implements DeptService {
 
     @Autowired
     private DeptDAO deptDAO;
